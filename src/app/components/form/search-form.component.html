@@ -1,0 +1,25 @@
+<form [formGroup]="searchForm" fxFill fxLayout="column" fxLayoutAlign="center center">
+    <strong>Title</strong>
+    <mat-form-field class="mb-1 mt-1">
+        <input matInput #q formControlName="q" placeholder="Enter title name.">
+    </mat-form-field>
+    <div class="text-center">
+        <strong>Genre</strong>
+        <mat-button-toggle-group #genre formControlName="genre" fxLayout="row" class="mt-1 mb-1">
+            <mat-button-toggle value="anime" class="hover">Anime</mat-button-toggle>
+            <mat-button-toggle value="manga" class="hover">Manga</mat-button-toggle>
+        </mat-button-toggle-group>    
+    </div>
+    <div class="mt-1 mb-1">
+        <button type="button" class="hover ml-1 mr-1" 
+        [disabled]="searchForm.invalid" mat-raised-button color="primary" 
+        (click)="setSearchData()">
+            Save
+        </button>
+        <button type="button" class="hover m1-1 mr-1" 
+        [disabled]="searchForm.invalid" mat-raised-button color="warn" 
+        (click)="getSearchData()">
+            Search
+        </button>
+    </div>
+</form>
