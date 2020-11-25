@@ -32,6 +32,7 @@ import { AnimeDataBase } from './anime.database';
 // Playing LottieFiles GIF/JSON
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { JikanService } from './jikan.service';
 
 //function required for player
 export function playerFactory() {
@@ -71,7 +72,7 @@ const ROUTES = [
   ],
   
   // Providers for dexie
-  providers: [{provide: MAT_DATE_LOCALE, useValue: 'en-sg'}, AnimeDataBase],
+  providers: [{provide: MAT_DATE_LOCALE, useValue: 'en-sg'}, AnimeDataBase, JikanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

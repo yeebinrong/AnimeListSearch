@@ -1,4 +1,9 @@
-<p>result works!</p>
 <div>
     <h4>Search {{ q }} / {{ genre }} </h4>
+</div>
+<div>
+    <mat-card *ngFor="let item of data">
+        <img src="{{item.image_url}}">
+        <p>{{item.title}}</p>
+    </mat-card>
 </div>
