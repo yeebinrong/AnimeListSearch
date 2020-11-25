@@ -45,7 +45,7 @@ const ROUTES = [
   {path:'search', component: SearchComponent },
   {path:'search/list', component: SearchListComponent },
   {path:'search/:genre/:q', component: ResultComponent },
-  {path:'**', redirectTo: '', pathMatch: "full" },
+  // {path:'**', redirectTo: '', pathMatch: "full" },
 ]
 
 @NgModule({

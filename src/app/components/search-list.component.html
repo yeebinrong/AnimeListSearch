@@ -1,6 +1,6 @@
 <p>search-list works!</p>
 <div *ngFor="let item of searchForms">
-    <mat-card>
+    <mat-card [routerLink]="['/search', item.genre, item.q]" class="mt-1 mb-1 ml-1 mr-1">
         {{item.q}}
         {{item.genre}}
     </mat-card>

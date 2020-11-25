@@ -11,7 +11,6 @@ export class MainComponent implements OnInit {
   options: AnimationOptions = {
     path: '/assets/rainbow_spinner.json'
   }
-  buttons;
 
   constructor(private router: Router) { }
 
